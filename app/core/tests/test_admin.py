@@ -13,7 +13,7 @@ class AdminSiteTests(TestCase):
             email='admin@fishdev.com',
             password='password123'
         )
-        # Users client helper function - 
+        # Users client helper function -
         # don't have to manually log the user in, client does it
         self.client.force_login(self.admin_user)
         self.user = get_user_model().objects.create_user(
@@ -37,7 +37,7 @@ class AdminSiteTests(TestCase):
         # /admin/core/user/
         res = self.client.get(url)
         self.assertEqual(res.status_code, 200)
-    
+
     def test_create_user_page(self):
         """Test that create user page works"""
         url = reverse('admin:core_user_add')
