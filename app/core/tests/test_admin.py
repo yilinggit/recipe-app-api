@@ -3,6 +3,7 @@ from django.test import TestCase, Client
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 # allow us to generate urls for django admin page
+# https://www.mlr2d.org/contents/djangorestapi/05_modifying_djangoadmininterface
 
 
 class AdminSiteTests(TestCase):
